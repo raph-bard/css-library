@@ -63,19 +63,19 @@
       <div class="section">
         <h2 class="text-5 mb-4">Basic Structure:</h2>
         <p class="mb-2 text-3 line-5">
-          The library uses classes to style HTML elements. Here are some basic classes you can use:
+          The library uses classes to define the style of HTML elements. Here are some basic classes you can use:
         </p>
         <ul class="text-3 subsection code p-4">
-          <li>Text-align: .text-center, .text-left, .text-right, etc..</li>
-          <li>Font-size: .text-1 to .text-12.</li>
-          <li>Line-height: .line-1 to .line-12</li>
-          <li>Font-weight: .font-1 to .font-9.</li>
+          <li>Text-align: .text-center,.text-left, .text-right, etc..</li>
+          <li>Font-size : .text-1 to .text-12.</li>
+          <li>Line-height : .line-1 to .line-12</li>
+          <li>Font-weight : .font-1 to .font-9.</li>
           <li>
-            Text-transform: .text-uppercase, .text-lowercase, .text-capitalize.
+            Text-transform : .text-uppercase, .text-lowercase, .text-capitalize.
           </li>
-          <li>Displays: .d-block, .d-inline, .d-none, etc.</li>
+          <li>Displays : .d-block, .d-inline, .d-none, etc.</li>
           <li>
-            Margins/paddings: .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-,
+            Margins/paddings : .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-,
             .pt-, .pr-, .pb-, .pl-, .py-, .px-.
           </li>
         </ul>
@@ -88,17 +88,17 @@
         </p>
         <ul class="subsection code">
           <li>
-            .container: Sets a maximum width for the content and centers it horizontally.
+            .container: Sets a maximum width for the content and horizontally centers it.
           </li>
           <li>.row: Defines a row in the grid.</li>
-          <li>Column classes: .col-1 to .col-12.</li>
+          <li>Column classes : .col-1 to .col-12.</li>
         </ul>
       </div>
 
       <div class="section">
         <h2 class="text-5 mb-4">Customization:</h2>
         <p class="mb-2 text-3 line-5">
-          You can also customize the library by adding your own styles or replacing default values of CSS variables. Some features, such as the scrollbar or the grid system, are customizable via variables in the corresponding SASS files.
+          You can also customize the library by adding your own styles or replacing the default values of CSS variables. Some features, such as the scrollbar or grid system, are customizable via variables in the corresponding SASS files.
         </p>
       </div>
 
@@ -109,14 +109,14 @@
         </p>
 
         <div class="subsection">
-          <h5 class="mb-2">Center an Element and Apply Bottom Margin:</h3>
+          <h5 class="mb-2">Center an element and apply bottom margin:</h3>
           <div class="code">
             &lt;p class="text-center mb-4"&gt; Content &lt;/p&gt;
           </div>
         </div>
 
         <div class="subsection">
-          <h5 class="mb-2">Create a Simple Responsive Grid:</h5>
+          <h5 class="mb-2">Create a simple and responsive grid:</h5>
           <div class="code line-6">
             &lt;div class="container"&gt;<br>
             <span class="tab"></span> &lt;div class="row"&gt; <br>
@@ -133,6 +133,30 @@
        <div class="col-6 code">Column 2</div>
        </div>
        </div>
+       <div class="section">
+        <h2 class="text-5 mb-4">Rounded Corners:</h2>
+        <p class="text-3 line-5 mb-2">
+          To round the corners of elements, use the following classes:
+        </p>
+        <ul class="subsection code">
+          <li>.rounded : Applies a border-radius of 50% to create a circle.</li>
+          <li>.rounded-none : Removes the border-radius.</li>
+          <li>.rounded-1 to .rounded-12 : Sets the border-radius with different values.</li>
+        </ul>
+        <div class="section">
+            <h2 class="text-5 mb-4">Flex:</h2>
+            <p class="text-3 line-5 mb-2">
+              Flex classes allow controlling the alignment and positioning of elements:
+            </p>
+            <ul class="subsection code">
+              <li>Horizontal alignment : .align-</li>
+              <li>Vertical alignment : .justify-</li>
+              <li>Directions : .flex-direction</li>
+              <li>Flex wrap : .flex-wrap, .flex-nowrap, .flex-wrap-reverse</li>
+              <li>Gaps : .gap-1 to .gap-12.</li>
+            </ul>
+          </div>
+      </div>
     </div>
   </body>
 </html>
