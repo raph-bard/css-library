@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentation de la bibliothèque CSS</title>
+    <title>CSS Library Documentation</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -47,14 +47,13 @@
   <body>
     <div class="container">
       <div class="header">
-        <h1 class="pt-8 text-6">Documentation de la bibliothèque CSS</h1>
+        <h1 class="pt-8 text-6">CSS Library Documentation</h1>
       </div>
 
       <div class="section">
         <h2 class="mb-4 text-5">Installation:</h2>
         <p class="mb-2 text-3 line-5">
-          Pour commencer à utiliser la bibliothèque CSS, incluez le fichier main.css
-          dans votre projet avant votre propre fichier css:
+          To start using the CSS library, include the main.css file in your project before your own CSS file:
         </p>
         <div class="code">
           &lt;link rel="stylesheet" href="path/to/main.css"&gt;
@@ -62,22 +61,21 @@
       </div>
 
       <div class="section">
-        <h2 class="text-5 mb-4">Structure de base:</h2>
+        <h2 class="text-5 mb-4">Basic Structure:</h2>
         <p class="mb-2 text-3 line-5">
-          La bibliothèque utilise des classes pour définir le style des éléments
-          HTML. Voici quelques classes de base que vous pouvez utiliser :
+          The library uses classes to style HTML elements. Here are some basic classes you can use:
         </p>
         <ul class="text-3 subsection code p-4">
-          <li>Text-align: .text-center,.text-left, .text-right, etc..</li>
-          <li>Font-size : .text-1 à .text-12.</li>
-          <li>Line-height : .line-1 à .line-12</li>
-          <li>Font-weight : .font-1 à .font-9.</li>
+          <li>Text-align: .text-center, .text-left, .text-right, etc..</li>
+          <li>Font-size: .text-1 to .text-12.</li>
+          <li>Line-height: .line-1 to .line-12</li>
+          <li>Font-weight: .font-1 to .font-9.</li>
           <li>
-            Text-transform : .text-uppercase, .text-lowercase, .text-capitalize.
+            Text-transform: .text-uppercase, .text-lowercase, .text-capitalize.
           </li>
-          <li>Displays : .d-block, .d-inline, .d-none, etc.</li>
+          <li>Displays: .d-block, .d-inline, .d-none, etc.</li>
           <li>
-            Margins/paddings : .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-,
+            Margins/paddings: .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-,
             .pt-, .pr-, .pb-, .pl-, .py-, .px-.
           </li>
         </ul>
@@ -86,49 +84,44 @@
       <div class="section">
         <h2 class="text-5 mb-4">Grid:</h2>
         <p class="mb-2 text-3 line-5">
-          La bibliothèque fournit également un système de grid simple pour
-          organiser vos mises en page. Voici les classes de grid disponibles :
+          The library also provides a simple grid system for organizing your layouts. Here are the available grid classes:
         </p>
         <ul class="subsection code">
           <li>
-            .container: Définit une largeur maximale pour le contenu et le
-            centre horizontalement.
+            .container: Sets a maximum width for the content and centers it horizontally.
           </li>
-          <li>.row: Définit une ligne dans la grille.</li>
-          <li>Classes de colonnes : .col-1 à .col-12.</li>
+          <li>.row: Defines a row in the grid.</li>
+          <li>Column classes: .col-1 to .col-12.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2 class="text-5 mb-4">Personnalisation:</h2>
+        <h2 class="text-5 mb-4">Customization:</h2>
         <p class="mb-2 text-3 line-5">
-          Vous pouvez également personnaliser la bibliothèque en ajoutant vos
-          propres styles ou en remplaçant les valeurs par défaut des variables
-          CSS. Certaines fonctionnalités, telles que la scrollbar ou le système
-          de grille, sont personnalisables via des variables dans les fichiers SASS du même nom.
+          You can also customize the library by adding your own styles or replacing default values of CSS variables. Some features, such as the scrollbar or the grid system, are customizable via variables in the corresponding SASS files.
         </p>
       </div>
 
       <div class="section">
-        <h2 class="text-5 mb-4">Exemples d'utilisation:</h2>
+        <h2 class="text-5 mb-4">Usage Examples:</h2>
         <p class="mb-4 text-3 line-5">
-          Voici quelques exemples d'utilisation :
+          Here are some usage examples:
         </p>
 
         <div class="subsection">
-          <h5 class="mb-2">Centrer un élément et appliquer une marge en bas:</h3>
+          <h5 class="mb-2">Center an Element and Apply Bottom Margin:</h3>
           <div class="code">
-            &lt;p class="text-center mb-4"&gt; Contenu &lt;/p&gt;
+            &lt;p class="text-center mb-4"&gt; Content &lt;/p&gt;
           </div>
         </div>
 
         <div class="subsection">
-          <h5 class="mb-2">Créer une grille simple et responsive:</h5>
+          <h5 class="mb-2">Create a Simple Responsive Grid:</h5>
           <div class="code line-6">
             &lt;div class="container"&gt;<br>
             <span class="tab"></span> &lt;div class="row"&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Colonne 1&lt;/div&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Colonne 2&lt;/div&gt; <br>
+            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Column 1&lt;/div&gt; <br>
+            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Column 2&lt;/div&gt; <br>
             <span class="tab"></span>&lt;/div&gt; <br>
             &lt;/div&gt;
           </div>
@@ -136,8 +129,8 @@
       </div>
       <div class="container">
         <div class="row text-center mb-8">
-       <div class="col-6 code">Colonne 1</div>
-       <div class="col-6 code">Colonne 2</div>
+       <div class="col-6 code">Column 1</div>
+       <div class="col-6 code">Column 2</div>
        </div>
        </div>
     </div>
