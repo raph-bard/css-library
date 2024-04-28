@@ -5,163 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My project's Library</title>
     <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../src/custom.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="../src/favicon-32x32.png" />
-    <script src="design-pattern.js"></script>
-    <style>
-      /* NB : Don't CSS in HTML files. I did it because I'm crazy. You are not. */
-
-      html {
-        font-family: "Poppins", sans-serif;
-      }
-
-      h2 {
-        width: 100%;
-        border-bottom: 1px solid black;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-      }
-
-      h3 {
-        width: calc(100% - 30px);
-        margin-block: 1rem;
-      }
-
-      h3:not(:first-of-type) {
-        border-top: 1px solid black;
-        padding-top: 0.75rem;
-      }
-
-      .nav {
-        right: 5px;
-        top: 10px;
-      }
-
-      .nav a:hover, nav a:hover {
-        color: #007bff;
-      }
-
-      .nav a, .nav a:hover, nav a, nav a:hover {
-        transition: all .3s;
-      }
-
-      section {
-        margin-block: 1.5rem;
-        border: 1px solid black;
-        padding: 1rem;
-        border-radius: 0.5rem;
-      }
-
-      
-      header nav {
-        width: 300px;
-        height: 100vh;
-        background-color: white;
-        padding-top: 90px;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        transition: transform .3s ease-in-out;
-        box-shadow: 0px 0px 20px 0px #0000008c;
-        font-weight: 600;
-        z-index: 99;
-      }
-
-      header.active nav {
-        transform: translateX(0);
-        transition: transform .3s ease-in-out;
-      }
-
-      nav ul {
-        padding-inline: 1rem;    
-        max-height: calc(100vh - 90px);
-        overflow: auto;
-      }
-
-      nav li {
-        margin-bottom: 14px;
-      }
-
-      #toggleButton {
-        border: 0;
-        background-color: transparent;
-        z-index: 100;
-        width: 24px;
-        height: 24px;
-        top: 28px;
-        left: 20px;
-      }
-      #toggleButton span.line-1,
-      #toggleButton span.line-2,
-      #toggleButton span.line-3 {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: grey;
-        border-radius: 10px;
-      }
-      #toggleButton span.line-1 {
-        transform: translateY(-7px);
-      }
-      #toggleButton span.line-2 {
-        transform: translateY(0px);
-      }
-      #toggleButton span.line-3 {
-        transform: translateY(7px);
-      }
-      
-      .copy-button {
-        padding: 2px 5px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        right: 4px;
-        top: 4px;
-      }
-
-      .copy-button svg {
-        width: 13px;
-      }
-
-      .copy-button:hover {
-        background-color: #0056b3;
-      }
-
-      .code-block {
-        background-color: #282c34;
-        color: #abb2bf;
-        padding: 14px 55px 14px 14px;
-        border-radius: 5px;
-        margin-block: 15px;
-        position: relative;
-        width: fit-content;
-      }
-
-      .copied-text {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        color: #007bff;
-        display: none;
-        font-size: 8px;
-      }
-    </style>
   </head>
   <body>
+    <header class="p-relative">
+      <h1 class="text-center mt-12 mb-10">My project's Library</h1>
+      <nav class="p-fixed"><ul></ul></nav>
+    </header>
     <ul class="nav d-flex gap-2 font-6 p-absolute">
       <li><a href="../english-index.html">CSS Library's Doc</a></li>
     </ul>
     <button id="toggleButton" class="p-fixed"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></button>
-    <header class="p-relative">
-      <h1 class="text-center mt-8 mb-10">My project's Library</h1>
-      <nav class="p-fixed"><ul></ul></nav>
-    </header>
     <main class="container">
       <section id="text-examples">
         <h2>Texts</h2>
@@ -249,81 +108,10 @@
       </section>
       <!-- ----------------------------------------------------------- -->
     </main>
+    <footer id="footer">
+      
+    </footer>
   </body>
-  <script>
-    const toggleButton = document.getElementById("toggleButton");
-    const header = document.querySelector("header");
-
-    toggleButton.addEventListener("click", function () {
-      header.classList.toggle("active");
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll("section");
-
-      const navList = document.querySelector("header nav ul");
-      sections.forEach(function (section) {
-        const sectionId = section.getAttribute("id");
-        const sectionTitle = section.querySelector("h2").textContent;
-
-        const listItem = document.createElement("li");
-        const link = document.createElement("a");
-        link.textContent = sectionTitle;
-        link.setAttribute("href", `#${sectionId}`);
-
-        listItem.appendChild(link);
-        navList.appendChild(listItem);
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const codeBlocks = document.querySelectorAll("code");
-
-      codeBlocks.forEach(function (code) {
-        const codeContent = code.textContent.trim();
-
-        const codeBlock = document.createElement("div");
-        codeBlock.classList.add("code-block");
-
-        const pre = document.createElement("pre");
-        const codeElement = document.createElement("code");
-        codeElement.textContent = codeContent;
-
-        pre.appendChild(codeElement);
-        codeBlock.appendChild(pre);
-
-        const copyButton = document.createElement("button");
-        copyButton.classList.add("copy-button");
-        copyButton.innerHTML =
-          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" fill="#fff"/></svg>';
-        copyButton.onclick = function () {
-          copyCode(codeContent, copiedText);
-        };
-
-        codeBlock.appendChild(copyButton);
-
-        const copiedText = document.createElement("span");
-        copiedText.classList.add("copied-text");
-        copiedText.textContent = "Copied!";
-        codeBlock.appendChild(copiedText);
-
-        code.parentNode.replaceChild(codeBlock, code);
-      });
-    });
-
-    function copyCode(codeContent, copiedText) {
-      const tempTextarea = document.createElement("textarea");
-      tempTextarea.value = codeContent;
-      document.body.appendChild(tempTextarea);
-      tempTextarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempTextarea);
-
-      copiedText.style.display = "inline-block";
-      setTimeout(function () {
-        copiedText.style.display = "none";
-      }, 3000);
-    }
-
-  </script>
+  <script src="/src/custom.js"></script>
+  <script src="/src/footer.js"></script>
 </html>
