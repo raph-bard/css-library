@@ -10,9 +10,17 @@
     />
     <link rel="stylesheet" href="main.css" />
     <style>
-      .header {
-        text-align: center;
-        margin-bottom: 2rem;
+      .nav {
+        right: 5px;
+        top: 10px;
+      }
+
+      .nav a:hover {
+        color: #007bff;
+      }
+
+      a, a:hover {
+        transition: all .3s;
       }
 
       .section {
@@ -23,13 +31,20 @@
         margin-bottom: 1rem;
       }
 
-      .code {
+      .column {
         background-color: #f5f5f5;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
         font-size: 14px;
         word-break: break-word;
+      }
+      .code {
+        background-color: #282c34;
+        color: #abb2bf;
+        padding: 14px 55px 14px 14px;
+        border-radius: 5px;
+        margin-block: 15px;
       }
       ul.code {
         list-style: circle;
@@ -45,14 +60,18 @@
     </style>
   </head>
   <body>
+    <ul class="nav d-flex gap-2 font-6 p-absolute">
+      <li><a href="english-index.html">EN</a></li>
+      <li><a href="design-system/design-system.html">Design System</a></li>
+    </ul>
     <div class="container">
-      <div class="header">
-        <h1 class="pt-8 text-6">Documentation de la bibliothèque CSS</h1>
-      </div>
+      <header class="my-6 text-center">
+        <h1 class="pt-8">Documentation de la bibliothèque CSS</h1>
+      </header>
 
       <div class="section">
         <h2 class="mb-4 text-5">Installation:</h2>
-        <p class="mb-2 text-3 line-5">
+        <p class="mb-2 line-5">
           Pour commencer à utiliser la bibliothèque CSS, incluez le fichier main.css
           dans votre projet avant votre propre fichier css:
         </p>
@@ -63,45 +82,74 @@
 
       <div class="section">
         <h2 class="text-5 mb-4">Structure de base:</h2>
-        <p class="mb-2 text-3 line-5">
+        <p class="mb-2 line-5">
           La bibliothèque utilise des classes pour définir le style des éléments
           HTML. Voici quelques classes de base que vous pouvez utiliser :
         </p>
-        <ul class="text-3 subsection code p-4">
-          <li>Text-align: .text-center,.text-left, .text-right, etc..</li>
-          <li>Font-size : .text-1 à .text-12.</li>
-          <li>Line-height : .line-1 à .line-12</li>
-          <li>Font-weight : .font-1 à .font-9.</li>
-          <li>
-            Text-transform : .text-uppercase, .text-lowercase, .text-capitalize.
-          </li>
-          <li>Displays : .d-block, .d-inline, .d-none, etc.</li>
-          <li>
-            Margins/paddings : .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-,
-            .pt-, .pr-, .pb-, .pl-, .py-, .px-.
-          </li>
+        <ul class="subsection code p-4">
+          <li><strong>Text-align:</strong> .text-center, .text-left, .text-right, .text-justify</li>
+          <li><strong>Font-size:</strong> .text-1 à .text-12.</li>
+          <li><strong>Line-height:</strong> .line-1 à .line-12</li>
+          <li><strong>Font-weight:</strong> .font-1 à .font-9.</li>
+          <li><strong>Text-transform:</strong> .text-uppercase, .text-lowercase, .text-capitalize.</li>
+          <li><strong>Displays:</strong> .d-block, .d-inline, .d-none, etc.</li>
+          <li><strong>Margins/paddings:</strong> .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-, .pt-, .pr-, .pb-, .pl-, .py-, .px-.</li>
+          <li><strong>Positions:</strong> .p-relative, .p-absolute, .p-fixed, .p-static, .p-sticky</li>
+          <li><strong>Bordure:</strong> .bordered (Applique une bordure noire d'1px.)</li>
+        </ul>
+      </div>      
+
+      <div class="section">
+        <h2 class="text-5 mb-4">Arrondis (Border-radius):</h2>
+        <p class="line-5 mb-2">
+          Pour arrondir les coins des éléments, utilisez les classes suivantes :
+        </p>
+        <ul class="subsection code">
+          <li><strong>.rounded :</strong> Applique un border-radius de 50% pour créer un cercle.</li>
+          <li><strong>.rounded-none :</strong> Supprime le border-radius.</li>
+          <li><strong>.rounded-1 à .rounded-12 :</strong> Définit le border-radius avec différentes valeurs.</li>
         </ul>
       </div>
+      
+      <div class="section">
+        <h2 class="text-5 mb-4">Flex:</h2>
+        <p class="line-5 mb-2">
+            Les classes flex permettent de contrôler l'alignement et le positionnement des éléments :
+        </p>
+        <ul class="subsection code">
+            <li><strong>Horizontal Alignment:</strong> .align-center, .align-baseline, etc..</li>
+            <li><strong>Vertical Alignment:</strong> .justify-center, .justify-between, etc..</li>
+            <li><strong>Directions:</strong> .flex-row, .flex-column, etc..</li>
+            <li><strong>Flex Wrap:</strong> .flex-wrap, .flex-nowrap, .flex-wrap-reverse</li>
+            <li><strong>Gaps:</strong> .gap-1 à .gap-12.</li>
+            <li><strong>Align Items:</strong> .align-start, .align-end, .align-center, etc..</li>
+            <li><strong>Align Self:</strong> .align-self-start, .align-self-end, .align-self-center, etc..</li>
+            <li><strong>Align Content:</strong> .content-start, .content-end, .content-center, etc..</li>
+            <li><strong>Justify Content:</strong> .justify-start, .justify-end, .justify-center, etc..</li>
+            <li><strong>Justify Self:</strong> .justify-self-start, .justify-self-end, .justify-self-center, etc..</li>
+        </ul>
+    </div>
+    
 
       <div class="section">
         <h2 class="text-5 mb-4">Grid:</h2>
-        <p class="mb-2 text-3 line-5">
+        <p class="mb-2 line-5">
           La bibliothèque fournit également un système de grid simple pour
           organiser vos mises en page. Voici les classes de grid disponibles :
         </p>
         <ul class="subsection code">
           <li>
-            .container: Définit une largeur maximale pour le contenu et le
+            <strong>.container:</strong> Définit une largeur maximale pour le contenu et le
             centre horizontalement.
           </li>
-          <li>.row: Définit une ligne dans la grille.</li>
-          <li>Classes de colonnes : .col-1 à .col-12.</li>
+          <li><strong>.row:</strong> Définit une ligne dans la grille.</li>
+          <li><strong>Classes de colonnes :</strong> .col-1 à .col-12.</li>
         </ul>
       </div>
 
       <div class="section">
         <h2 class="text-5 mb-4">Personnalisation:</h2>
-        <p class="mb-2 text-3 line-5">
+        <p class="mb-2 line-5">
           Vous pouvez également personnaliser la bibliothèque en ajoutant vos
           propres styles ou en remplaçant les valeurs par défaut des variables
           CSS. Certaines fonctionnalités, telles que la scrollbar ou le système
@@ -111,59 +159,39 @@
 
       <div class="section">
         <h2 class="text-5 mb-4">Exemples d'utilisation:</h2>
-        <p class="mb-4 text-3 line-5">
+        <p class="mb-4 line-5">
           Voici quelques exemples d'utilisation :
         </p>
 
         <div class="subsection">
-          <h5 class="mb-2">Centrer un élément et appliquer une marge en bas:</h3>
+          <h4 class="mb-2">Centrer un élément et appliquer une marge en bas:</h4>
           <div class="code">
             &lt;p class="text-center mb-4"&gt; Contenu &lt;/p&gt;
           </div>
         </div>
 
         <div class="subsection">
-          <h5 class="mb-2">Créer une grille simple et responsive:</h5>
+          <h4 class="mb-2">Créer une grille simple et responsive:</h4>
           <div class="code line-6">
             &lt;div class="container"&gt;<br>
-            <span class="tab"></span> &lt;div class="row"&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Colonne 1&lt;/div&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Colonne 2&lt;/div&gt; <br>
+            <span class="tab"></span> &lt;div class="d-flex gap-4"&gt; <br>
+            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Contenu 1&lt;/div&gt; <br>
+            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Contenu 2&lt;/div&gt; <br>
             <span class="tab"></span>&lt;/div&gt; <br>
             &lt;/div&gt;
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row text-center mb-8">
-       <div class="col-6 code">Colonne 1</div>
-       <div class="col-6 code">Colonne 2</div>
-       </div>
-       </div>
-       <div class="section">
-        <h2 class="text-5 mb-4">Arrondis (Rounded):</h2>
-        <p class="text-3 line-5 mb-2">
-          Pour arrondir les coins des éléments, utilisez les classes suivantes :
-        </p>
-        <ul class="subsection code">
-          <li>.rounded : Applique un border-radius de 50% pour créer un cercle.</li>
-          <li>.rounded-none : Supprime le border-radius.</li>
-          <li>.rounded-1 à .rounded-12 : Définit le border-radius avec différentes valeurs.</li>
-        </ul>
-        <div class="section">
-            <h2 class="text-5 mb-4">Flex:</h2>
-            <p class="text-3 line-5 mb-2">
-              Les classes flex permettent de contrôler l'alignement et le positionnement des éléments :
-            </p>
-            <ul class="subsection code">
-              <li>Alignement horizontal : .align-</li>
-              <li>Alignement vertical : .justify-</li>
-              <li>Directions : .flex-direction</li>
-              <li>Flex wrap : .flex-wrap, .flex-nowrap, .flex-wrap-reverse</li>
-              <li>Gaps : .gap-1 à .gap-12.</li>
-            </ul>
-          </div>
-      </div>
+      <div class="row gap-4 text-center mb-8">
+        <div class="col-6 column">
+          <h2 class="mb-4">Colonne 1</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi voluptates debitis totam ad ex in, inventore ducimus!</p>
+        </div>
+        <div class="col-6 column">
+          <h2 class="mb-4">Colonne 2</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi voluptates debitis totam ad ex in, inventore ducimus!</p>
+        </div>
+     </div>
     </div>
   </body>
 </html>

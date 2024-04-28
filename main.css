@@ -286,48 +286,24 @@ button, input, select, textarea {
   display: inline-grid;
 }
 
-.d-block {
-  display: block;
+.p-relative {
+  position: relative;
 }
 
-.d-inline {
-  display: inline;
+.p-absolute {
+  position: absolute;
 }
 
-.d-inline-block {
-  display: inline-block;
+.p-fixed {
+  position: fixed;
 }
 
-.d-inline-flex {
-  display: inline-flex;
+.p-static {
+  position: static;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.d-none {
-  display: none;
-}
-
-.d-table {
-  display: table;
-}
-
-.d-table-row {
-  display: table-row;
-}
-
-.d-table-cell {
-  display: table-cell;
-}
-
-.d-grid {
-  display: grid;
-}
-
-.d-inline-grid {
-  display: inline-grid;
+.p-sticky {
+  position: sticky;
 }
 
 .m-0 {
@@ -1082,6 +1058,11 @@ button, input, select, textarea {
   padding-inline: 3rem;
 }
 
+/* Display */
+.flex {
+  display: flex;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1098,24 +1079,44 @@ button, input, select, textarea {
   flex-direction: column-reverse;
 }
 
-.items-start {
+.align-start {
   align-items: flex-start;
 }
 
-.items-end {
+.align-end {
   align-items: flex-end;
 }
 
-.items-center {
+.align-center {
   align-items: center;
 }
 
-.items-baseline {
+.align-baseline {
   align-items: baseline;
 }
 
-.items-stretch {
+.align-stretch {
   align-items: stretch;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
 }
 
 .content-start {
@@ -1136,6 +1137,10 @@ button, input, select, textarea {
 
 .content-around {
   align-content: space-around;
+}
+
+.content-evenly {
+  align-content: space-evenly;
 }
 
 .content-stretch {
@@ -1164,6 +1169,22 @@ button, input, select, textarea {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.justify-self-start {
+  justify-self: flex-start;
+}
+
+.justify-self-end {
+  justify-self: flex-end;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
 }
 
 .flex-wrap {
@@ -1224,6 +1245,10 @@ button, input, select, textarea {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.bordered {
+  border: 1px solid black;
 }
 
 .rounded {
@@ -1307,8 +1332,7 @@ button, input, select, textarea {
 
 .container {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 @media only screen and (min-width: 33.75em) {
   .container {
@@ -1323,20 +1347,7 @@ button, input, select, textarea {
 }
 
 .row {
-  position: relative;
-  width: 100%;
-}
-
-.row [class^=col] {
-  float: left;
-  margin: 0.5rem 2%;
-  min-height: 0.125rem;
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+  display: block;
 }
 
 .col-1,
@@ -1351,45 +1362,48 @@ button, input, select, textarea {
 .col-10,
 .col-11,
 .col-12 {
-  width: 96%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 45em) {
   .col-1 {
-    width: 4.3333333333%;
+    width: 8.3333333333%;
   }
   .col-2 {
-    width: 12.6666666667%;
+    width: 16.6666666667%;
   }
   .col-3 {
-    width: 21%;
+    width: 25%;
   }
   .col-4 {
-    width: 29.3333333333%;
+    width: 33.3333333333%;
   }
   .col-5 {
-    width: 37.6666666667%;
+    width: 41.6666666667%;
   }
   .col-6 {
-    width: 46%;
+    width: 50%;
   }
   .col-7 {
-    width: 54.3333333333%;
+    width: 58.3333333333%;
   }
   .col-8 {
-    width: 62.6666666667%;
+    width: 66.6666666667%;
   }
   .col-9 {
-    width: 71%;
+    width: 75%;
   }
   .col-10 {
-    width: 79.3333333333%;
+    width: 83.3333333333%;
   }
   .col-11 {
-    width: 87.6666666667%;
+    width: 91.6666666667%;
   }
   .col-12 {
-    width: 96%;
+    width: 100%;
+  }
+  .row {
+    display: flex;
   }
   .hidden-sm {
     display: block;

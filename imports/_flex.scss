@@ -1,34 +1,48 @@
 ///// Flex /////
-/// directions
+/* Display */
+.flex { display: flex; }
+/// Flex directions
 .flex-row { flex-direction: row; }
 .flex-row-reverse { flex-direction: row-reverse; }
 .flex-column { flex-direction: column; }
 .flex-column-reverse { flex-direction: column-reverse; }
-/// align-items
-.items-start { align-items: flex-start; }
-.items-end { align-items: flex-end; }
-.items-center { align-items: center; }
-.items-baseline { align-items: baseline; }
-.items-stretch { align-items: stretch; }
-/// align-contents
+/// Align items
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+.align-center { align-items: center; }
+.align-baseline { align-items: baseline; }
+.align-stretch { align-items: stretch; }
+/// Align self 
+.align-self-start { align-self: flex-start; }
+.align-self-end { align-self: flex-end; }
+.align-self-center { align-self: center; }
+.align-self-baseline { align-self: baseline; }
+.align-self-stretch { align-self: stretch; }
+/// Align content
 .content-start { align-content: flex-start; }
 .content-end { align-content: flex-end; }
 .content-center { align-content: center; }
 .content-between { align-content: space-between; }
 .content-around { align-content: space-around; }
+.content-evenly { align-content: space-evenly; }
 .content-stretch { align-content: stretch; }
-/// justify-contents
+/// Justify content
 .justify-start { justify-content: flex-start; }
 .justify-end { justify-content: flex-end; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
 .justify-around { justify-content: space-around; }
 .justify-evenly { justify-content: space-evenly; }
-/// wraps
+/// Justify self
+.justify-self-start { justify-self: flex-start; }
+.justify-self-end { justify-self: flex-end; }
+.justify-self-center { justify-self: center; }
+.justify-self-stretch { justify-self: stretch; }
+/// Flex wrap
 .flex-wrap { flex-wrap: wrap; }
 .flex-wrap-reverse { flex-wrap: wrap-reverse; }
 .flex-nowrap { flex-wrap: nowrap; }
-/// gaps
+/// Gaps
 .gap-1 { gap: 0.25rem; }
 .gap-2 { gap: 0.5rem; }
 .gap-3 { gap: 0.75rem; }
@@ -41,4 +55,3 @@
 .gap-10 { gap: 2.5rem; }
 .gap-11 { gap: 2.75rem; }
 .gap-12 { gap: 3rem; }
-

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My project's Library</title>
+    <link rel="stylesheet" href="../main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="design-pattern.js"></script>
+    <style>
+      /* NB : Don't CSS in HTML files. I did it because I'm crazy. You are not. */
+
+      html {
+        font-family: "Poppins", sans-serif;
+      }
+
+      h2 {
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        width: calc(100% - 30px);
+        margin-block: 1rem;
+      }
+
+      h3:not(:first-of-type) {
+        border-top: 1px solid black;
+        padding-top: 0.75rem;
+      }
+
+      .nav {
+        right: 5px;
+        top: 10px;
+      }
+
+      .nav a:hover, nav a:hover {
+        color: #007bff;
+      }
+
+      .nav a, .nav a:hover, nav a, nav a:hover {
+        transition: all .3s;
+      }
+
+      section {
+        margin-block: 1.5rem;
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+
+      
+      header nav {
+        width: 300px;
+        height: 100vh;
+        background-color: white;
+        padding-top: 90px;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+        box-shadow: 0px 0px 20px 0px #0000008c;
+        font-weight: 600;
+        z-index: 99;
+      }
+
+      header.active nav {
+        transform: translateX(0);
+        transition: transform .3s ease-in-out;
+      }
+
+      nav ul {
+        padding-inline: 1rem;    
+        max-height: calc(100vh - 90px);
+        overflow: auto;
+      }
+
+      nav li {
+        margin-bottom: 14px;
+      }
+
+      #toggleButton {
+        border: 0;
+        background-color: transparent;
+        z-index: 100;
+        width: 24px;
+        height: 24px;
+        top: 28px;
+        left: 20px;
+      }
+      #toggleButton span.line-1,
+      #toggleButton span.line-2,
+      #toggleButton span.line-3 {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: grey;
+        border-radius: 10px;
+      }
+      #toggleButton span.line-1 {
+        transform: translateY(-7px);
+      }
+      #toggleButton span.line-2 {
+        transform: translateY(0px);
+      }
+      #toggleButton span.line-3 {
+        transform: translateY(7px);
+      }
+      
+      .copy-button {
+        padding: 2px 5px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+      }
+
+      .copy-button svg {
+        width: 13px;
+      }
+
+      .copy-button:hover {
+        background-color: #0056b3;
+      }
+
+      .code-block {
+        background-color: #282c34;
+        color: #abb2bf;
+        padding: 14px 55px 14px 14px;
+        border-radius: 5px;
+        margin-block: 15px;
+        position: relative;
+        width: fit-content;
+      }
+
+      .copied-text {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        color: #007bff;
+        display: none;
+        font-size: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav d-flex gap-2 font-6 p-absolute">
+      <li><a href="../english-index.html">CSS Library's Doc</a></li>
+    </ul>
+    <button id="toggleButton" class="p-fixed"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></button>
+    <header class="p-relative">
+      <h1 class="text-center mt-8 mb-10">My project's Library</h1>
+      <nav class="p-fixed"><ul></ul></nav>
+    </header>
+    <main class="container">
+      <section id="text-examples">
+        <h2>Texts</h2>
+        <h3>Paragraph</h3>
+        <p>Lorem ipsum dolor sit <span>span</span> amet consectetur adipisicing elit. Quae <a href="#">link</a> dolorem dolorum quisquam repellat consectetur molestias quos sint sit at rerum pariatur <em>italic</em> reiciendis sequi suscipit et, <strong>strong</strong> ratione fugiat accusamus fuga.</p>
+        <h3>Alt. paragraph</h3>
+        <p>Lorem ipsum dolor sit <span>span</span> amet consectetur adipisicing elit. Quae <a href="#">link</a> dolorem dolorum quisquam repellat consectetur molestias quos sint sit at rerum pariatur <em>italic</em> reiciendis sequi suscipit et, <strong>strong</strong> ratione fugiat accusamus fuga.</p>
+        <h3>Inlined texts</h3>
+        <p class="mb-2">This is a <a href="#">link</a> within a paragraph.</p>
+        <p class="mb-2">This is a <strong>strong</strong> within a paragraph.</p>
+        <p class="mb-2">This is a <em>italicized</em> within paragraph.</p>
+        <p class="mb-2">This is a <span>span</span> within a paragraph.</p>
+      </section>
+      <section id="button-examples">
+        <h2>Buttons</h2>
+        <h3>Primary Button</h3>
+        <button class="btn btn-primary">Primary Button</button>
+        <code>btn btn-primary</code>
+        <h3>Secondary Button</h3>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <code>btn btn-secondary</code>
+      </section>
+      <section id="form-examples">
+        <h2>Forms</h2>
+        <form>
+            <fildset class="form-example">
+            <h3>Text Input</h3>
+            <label for="text-input">Label :</label>
+            <input type="text" id="text-input" name="text-input" />
+            </fieldset>
+            <fieldset class="form-example">
+            <h3>Password Input</h3>
+            <label for="password-input">Label :</label>
+            <input type="password" id="password-input" name="password-input" />
+            </fieldset>
+            <fieldset class="form-example">
+            <h3>Checkbox</h3>
+            <label><input type="checkbox" name="checkbox" /> Label</label>
+            </fieldset>
+            <fieldset class="form-example">
+            <h3>Radio Button</h3>
+            <label><input type="radio" name="radio" /> Label</label>
+            <label><input type="radio" name="radio" /> Label</label>
+            </fieldset>
+        </form>
+      </section>
+      <section id="card-examples">
+        <h2>Cards</h2>
+          <article class="card">
+            <h4>Card Title</h4>
+            <p>This is the content of the card.</p>
+          </article>
+          <code>.card</code>
+      </section>
+      <section id="list-examples">
+        <h2>Lists</h2>
+          <h3>Unordered List</h3>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+          <h3>Ordered List</h3>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+      </section>
+      <section id="your-own-examples">
+        <h2>Chips</h2>
+          <h3>Chip</h3>
+          <span>my chip</span>
+          <code>.chip</code>
+          <h3>Alt. Chip</h3>
+          <span>My alt chip</span>
+          <code>.chip .alt-chip</code>
+      </section>
+      <!-- EXAMPLE - COPY IT TO CREATE YOUR OWN PATTERN - DO NOT DELETE -->
+      <section id="your-own-examples">
+        <h2>Your own design pattern</h2>
+          <h3>Your html here</h3>
+          <!-- Replace this comment by your html -->
+          <code>Your copy code here</code>
+       <!-- ----------------------------------------------------------- -->
+      </section>
+    </main>
+  </body>
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const header = document.querySelector("header");
+
+    toggleButton.addEventListener("click", function () {
+      header.classList.toggle("active");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section");
+
+      const navList = document.querySelector("header nav ul");
+      sections.forEach(function (section) {
+        const sectionId = section.getAttribute("id");
+        const sectionTitle = section.querySelector("h2").textContent;
+
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.textContent = sectionTitle;
+        link.setAttribute("href", `#${sectionId}`);
+
+        listItem.appendChild(link);
+        navList.appendChild(listItem);
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const codeBlocks = document.querySelectorAll("code");
+
+      codeBlocks.forEach(function (code) {
+        const codeContent = code.textContent.trim();
+
+        const codeBlock = document.createElement("div");
+        codeBlock.classList.add("code-block");
+
+        const pre = document.createElement("pre");
+        const codeElement = document.createElement("code");
+        codeElement.textContent = codeContent;
+
+        pre.appendChild(codeElement);
+        codeBlock.appendChild(pre);
+
+        const copyButton = document.createElement("button");
+        copyButton.classList.add("copy-button");
+        copyButton.innerHTML =
+          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" fill="#fff"/></svg>';
+        copyButton.onclick = function () {
+          copyCode(codeContent, copiedText);
+        };
+
+        codeBlock.appendChild(copyButton);
+
+        const copiedText = document.createElement("span");
+        copiedText.classList.add("copied-text");
+        copiedText.textContent = "Copied!";
+        codeBlock.appendChild(copiedText);
+
+        code.parentNode.replaceChild(codeBlock, code);
+      });
+    });
+
+    function copyCode(codeContent, copiedText) {
+      const tempTextarea = document.createElement("textarea");
+      tempTextarea.value = codeContent;
+      document.body.appendChild(tempTextarea);
+      tempTextarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempTextarea);
+
+      copiedText.style.display = "inline-block";
+      setTimeout(function () {
+        copiedText.style.display = "none";
+      }, 3000);
+    }
+
+  </script>
+</html>
