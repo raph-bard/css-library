@@ -9,7 +9,9 @@ Cependant, lors du montage des pages du site, il peut être nécessaire d'ajuste
 Ainsi, la librairie et le design system travaillent en synergie, offrant une approche complète et modulaire pour le développement frontend, où les atomes définis dans le design system servent de fondation solide auxquels les classes de la librairie ajoutent des fonctionnalités et des styles spécifiques au contexte d'utilisation.
 
 
-Documentation et tutoriel de la bibliothèque CSS disponible en ouvrant le document french-index.html.
+Documentation et tutoriel de la bibliothèque CSS disponible en ouvrant le document french-index.html ou en consultant ce lien : 
+
+https://rphm-library.fr/fr
 
 
 ######################################################################################
@@ -26,4 +28,6 @@ However, when assembling website pages, it may be necessary to adjust certain vi
 The library and the design system work in synergy, offering a comprehensive and modular approach for frontend development, where the atoms defined in the design system serve as a solid foundation to which the library's classes add functionality and styles specific to the usage context.
 
 
-Documentation and tutorial for the CSS library are available by opening the french-index.html document.
+Documentation and tutorial for the CSS library are available by opening the french-index.html document or opening this url :
+
+https://rphm-library.fr/en
