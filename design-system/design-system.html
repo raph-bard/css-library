@@ -14,8 +14,7 @@
   </head>
   <body>
     <header class="p-relative">
-      <h1 class="text-center mt-12 mb-10">My project's Library</h1>
-      <nav class="p-fixed"><ul></ul></nav>
+      <h1 class="text-center mt-12 mb-10">Design system</h1>
     </header>
     <ul class="nav d-flex gap-2 font-6 p-absolute">
       <li><a href="../english-index.html">CSS Library's Doc</a></li>
@@ -27,7 +26,7 @@
         <h3>Paragraph</h3>
         <p>Lorem ipsum dolor sit <span>span</span> amet consectetur adipisicing elit. Quae <a href="#">link</a> dolorem dolorum quisquam repellat consectetur molestias quos sint sit at rerum pariatur <em>italic</em> reiciendis sequi suscipit et, <strong>strong</strong> ratione fugiat accusamus fuga.</p>
         <h3>Alt. paragraph</h3>
-        <p>Lorem ipsum dolor sit <span>span</span> amet consectetur adipisicing elit. Quae <a href="#">link</a> dolorem dolorum quisquam repellat consectetur molestias quos sint sit at rerum pariatur <em>italic</em> reiciendis sequi suscipit et, <strong>strong</strong> ratione fugiat accusamus fuga.</p>
+        <p class="text-alt">Lorem ipsum dolor sit <span>span</span> amet consectetur adipisicing elit. Quae <a href="#">link</a> dolorem dolorum quisquam repellat consectetur molestias quos sint sit at rerum pariatur <em>italic</em> reiciendis sequi suscipit et, <strong>strong</strong> ratione fugiat accusamus fuga.</p>
         <h3>Inlined texts</h3>
         <p class="mb-2">This is a <a href="#">link</a> within a paragraph.</p>
         <p class="mb-2">This is a <strong>strong</strong> within a paragraph.</p>
@@ -38,18 +37,16 @@
         <h2>Buttons</h2>
         <h3>Primary Button</h3>
         <button class="btn">Primary Button</button>
-        <code>button.btn</code>
         <h3>Secondary Button</h3>
         <button class="btn btn-secondary">Secondary Button</button>
-        <code>button.btn.btn-secondary</code>
       </section>
       <section id="form-examples">
         <h2>Forms</h2>
         <form>
-            <fildset class="form-example">
-            <h3>Text Input</h3>
-            <label for="text-input">Label :</label>
-            <input type="text" id="text-input" name="text-input" />
+            <fieldset class="form-example">
+              <h3>Text Input</h3>
+              <label for="text-input">Label :</label>
+              <input type="text" class="text" id="text-input" name="text-input" />
             </fieldset>
             <fieldset class="form-example">
             <h3>Password Input</h3>
@@ -73,7 +70,6 @@
             <h4>Card Title</h4>
             <p>This is the content of the card.</p>
           </article>
-          <code>article.card</code>
       </section>
       <section id="list-examples">
         <h2>Lists</h2>
@@ -90,26 +86,21 @@
             <li>Item 3</li>
           </ol>
       </section>
-      <section id="your-own-examples">
+      <section id="chips">
         <h2>Chips</h2>
           <h3>Chip</h3>
           <span>my chip</span>
-          <code>span.chip</code>
           <h3>Alt. Chip</h3>
           <span>My alt chip</span>
-          <code>span.chip.alt-chip</code>
       </section>
       <!-- EXAMPLE - COPY IT TO CREATE YOUR OWN PATTERN - DO NOT DELETE -->
       <section id="your-own-examples">
         <h2>Your own design pattern</h2>
           <h3>Your html here</h3>
-          <!-- Replace this comment by your html -->
-          <code>Your copy code here</code>
       </section>
       <!-- ----------------------------------------------------------- -->
     </main>
     <footer id="footer">
-      
     </footer>
   </body>
   <script src="/src/custom.js"></script>

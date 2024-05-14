@@ -7,16 +7,16 @@ $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
 
 .container {
-  width: 90%;
+  width: 96%;
   margin-inline: auto;
 
   @media only screen and (min-width: $breakpoint-small) {
-    width: 80%;
+    width: 90%;
   }
 
   @media only screen and (min-width: $breakpoint-large) {
-    width: 75%;
-    max-width: 60rem;
+    width: 94%;
+    max-width: 1200px;
   }
 }
 

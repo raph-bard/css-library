@@ -25,7 +25,8 @@
       <div class="section">
         <h2 class="mb-4 text-5">Installation:</h2>
         <p class="mb-2 line-5">
-          To start using the CSS library, include the main.css file in your project before your own CSS file:
+          To start using the CSS library, include the main.css file in your
+          project before your own CSS file:
         </p>
         <div class="code">
           &lt;link rel="stylesheet" href="path/to/main.css"&gt;
@@ -35,20 +36,48 @@
       <div class="section">
         <h2 class="text-5 mb-4">Basic Structure:</h2>
         <p class="mb-2 line-5">
-          The library uses classes to define the style of HTML elements. Here are some basic classes you can use:
+          The library uses classes to style HTML elements. Here are some basic
+          classes you can use:
         </p>
-        <ul class="subsection code p-4">
-          <li><strong>Text-align:</strong> .text-center, .text-left, .text-right, .text-justify</li>
+        <ul class="subsection code p-4 line-5">
+          <li>
+            <strong>Text-align:</strong> .text-center, .text-left, .text-right,
+            .text-justify
+          </li>
           <li><strong>Font-size:</strong> .text-1 to .text-12.</li>
           <li><strong>Line-height:</strong> .line-1 to .line-12</li>
           <li><strong>Font-weight:</strong> .font-1 to .font-9.</li>
-          <li><strong>Text-transform:</strong> .text-uppercase, .text-lowercase, .text-capitalize.</li>
+          <li>
+            <strong>Text-transform:</strong> .text-uppercase, .text-lowercase,
+            .text-capitalize.
+          </li>
           <li><strong>Displays:</strong> .d-block, .d-inline, .d-none, etc.</li>
-          <li><strong>Margins/paddings:</strong> .m-, .mt-, .mr-, .mb-, .ml-, .my-, .mx-, .p-, .pt-, .pr-, .pb-, .pl-, .py-, .px-.</li>
-          <li><strong>Positions:</strong> .p-relative, .p-absolute, .p-fixed, .p-static, .p-sticky</li>
-          <li><strong>Border:</strong> .bordered (Applies a 1px black border.)</li>
+          <li>
+            <strong>Margins/paddings:</strong> .m-, .mt-, .mr-, .mb-, .ml-,
+            .my-, .mx-, .p-, .pt-, .pr-, .pb-, .pl-, .py-, .px-.
+          </li>
+          <li>
+            <strong>Positions:</strong> .p-relative, .p-absolute, .p-fixed,
+            .p-static, .p-sticky
+          </li>
+          <li>
+            <strong>Border:</strong> .bordered (Applies a 1px black border.)
+          </li>
+          <li>
+            <strong>Text-transform: </strong>.text-uppercase, .text-lowercase,
+            .text-capitalize
+          </li>
+          <li>
+            <strong>Vertical-align: </strong>.vertical-middle,
+            .vertical-baseline, .vertical-bottom, etc...
+          </li>
+          <li>
+            <strong>clamp-text: </strong>Restricts text to a maximum of 4
+            lines.<br />Add the clamp-text class to specify the number of lines.
+            Example for one line: clamp-text clamp-text-1
+          </li>
         </ul>
-      </div>      
+      </div>
 
       <div class="section">
         <h2 class="text-5 mb-4">Border-radius:</h2>
@@ -56,74 +85,95 @@
           To round the corners of elements, use the following classes:
         </p>
         <ul class="subsection code">
-          <li><strong>.rounded :</strong> Applies a border-radius of 50% to create a circle.</li>
-          <li><strong>.rounded-none :</strong> Removes the border-radius.</li>
-          <li><strong>.rounded-1 to .rounded-12 :</strong> Defines the border-radius with different values.</li>
+          <li>
+            <strong>.rounded :</strong> Applies a border-radius of 50% to create
+            a circle.
+          </li>
+          <li><strong>.radius-none :</strong> Removes the border-radius.</li>
+          <li>
+            <strong>.radius-1 to .radius-12 :</strong> Sets the border-radius to
+            different values.
+          </li>
         </ul>
       </div>
-      
+
       <div class="section">
         <h2 class="text-5 mb-4">Flex:</h2>
         <p class="line-5 mb-2">
-            Flex classes control the alignment and positioning of elements:
-        </p>
-        <ul class="subsection code">
-            <li><strong>Horizontal Alignment:</strong> .align-center, .align-baseline, etc..</li>
-            <li><strong>Vertical Alignment:</strong> .justify-center, .justify-between, etc..</li>
-            <li><strong>Directions:</strong> .flex-row, .flex-column, etc..</li>
-            <li><strong>Flex Wrap:</strong> .flex-wrap, .flex-nowrap, .flex-wrap-reverse</li>
-            <li><strong>Gaps:</strong> .gap-1 to .gap-12.</li>
-            <li><strong>Align Items:</strong> .align-start, .align-end, .align-center, etc..</li>
-            <li><strong>Align Self:</strong> .align-self-start, .align-self-end, .align-self-center, etc..</li>
-            <li><strong>Align Content:</strong> .content-start, .content-end, .content-center, etc..</li>
-            <li><strong>Justify Content:</strong> .justify-start, .justify-end, .justify-center, etc..</li>
-            <li><strong>Justify Self:</strong> .justify-self-start, .justify-self-end, .justify-self-center, etc..</li>
-        </ul>
-    </div>
-    
-
-      <div class="section">
-        <h2 class="text-5 mb-4">Grid:</h2>
-        <p class="mb-2 line-5">
-          The library also provides a simple grid system for organizing your layouts. Here are the available grid classes:
+          Flex classes control the alignment and positioning of elements:
         </p>
         <ul class="subsection code">
           <li>
-            <strong>.container:</strong> Defines a maximum width for content and centers it horizontally.
+            <strong>Horizontal Alignment:</strong> .align-center,
+            .align-baseline, etc..
           </li>
-          <li><strong>.row:</strong> Defines a row in the grid.</li>
-          <li><strong>Column Classes:</strong> .col-1 to .col-12.</li>
+          <li>
+            <strong>Vertical Alignment:</strong> .justify-center,
+            .justify-between, etc..
+          </li>
+          <li><strong>Directions:</strong> .flex-row, .flex-column, etc..</li>
+          <li>
+            <strong>Flex Wrap:</strong> .flex-wrap, .flex-nowrap,
+            .flex-wrap-reverse
+          </li>
+          <li><strong>Gaps:</strong> .gap-1 to .gap-12.</li>
+          <li>
+            <strong>Align Items:</strong> .align-start, .align-end,
+            .align-center, etc..
+          </li>
+          <li>
+            <strong>Align Self:</strong> .align-self-start, .align-self-end,
+            .align-self-center, etc..
+          </li>
+          <li>
+            <strong>Align Content:</strong> .content-start, .content-end,
+            .content-center, etc..
+          </li>
+          <li>
+            <strong>Justify Content:</strong> .justify-start, .justify-end,
+            .justify-center, etc..
+          </li>
+          <li>
+            <strong>Justify Self:</strong> .justify-self-start,
+            .justify-self-end, .justify-self-center, etc..
+          </li>
         </ul>
       </div>
 
       <div class="section">
         <h2 class="text-5 mb-4">Customization:</h2>
         <p class="mb-2 line-5">
-          You can also customize the library by adding your own styles or replacing default values of CSS variables. Some features, such as scrollbar or grid system, are customizable via variables in the corresponding SASS files.
+          You can also customize the library by adding your own styles or
+          replacing default values of CSS variables. Some features, such as the
+          scrollbar or grid system, are customizable via variables in the
+          corresponding SASS files.
         </p>
       </div>
 
       <div class="section">
         <h2 class="text-5 mb-4">Usage Examples:</h2>
-        <p class="mb-4 line-5">
-          Here are some usage examples:
-        </p>
+        <p class="mb-4 line-5">Here are some usage examples:</p>
 
         <div class="subsection">
-          <h4 class="mb-2">Center an element and apply bottom margin:</h4>
+          <h4 class="mb-2">
+            Center text, change font, and apply margins and padding:
+          </h4>
           <div class="code">
-            &lt;p class="text-center mb-4"&gt; Content &lt;/p&gt;
+            &lt;p class="text-center text-6 font-6 line-4 px-6 pt-2 mb-4"&gt;
+            Content &lt;/p&gt;
           </div>
         </div>
 
         <div class="subsection">
           <h4 class="mb-2">Create a simple and responsive grid:</h4>
           <div class="code line-6">
-            &lt;div class="container"&gt;<br>
-            <span class="tab"></span> &lt;div class="d-flex gap-4"&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Content 1&lt;/div&gt; <br>
-            <span class="tab"></span><span class="tab"></span>&lt;div class="col-6"&gt;Content 2&lt;/div&gt; <br>
-            <span class="tab"></span>&lt;/div&gt; <br>
+            &lt;div class="container"&gt;<br />
+            <span class="tab"></span> &lt;div class="d-flex gap-4"&gt; <br />
+            <span class="tab"></span><span class="tab"></span>&lt;div
+            class="col-6"&gt;Content 1&lt;/div&gt; <br />
+            <span class="tab"></span><span class="tab"></span>&lt;div
+            class="col-6"&gt;Content 2&lt;/div&gt; <br />
+            <span class="tab"></span>&lt;/div&gt; <br />
             &lt;/div&gt;
           </div>
         </div>
@@ -131,13 +181,19 @@
       <div class="row gap-4 text-center mb-8">
         <div class="col-6 column">
           <h2 class="mb-4">Column 1</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi voluptates debitis totam ad ex in, inventore ducimus!</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi
+            voluptates debitis totam ad ex in, inventore ducimus!
+          </p>
         </div>
         <div class="col-6 column">
           <h2 class="mb-4">Column 2</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi voluptates debitis totam ad ex in, inventore ducimus!</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga modi
+            voluptates debitis totam ad ex in, inventore ducimus!
+          </p>
         </div>
-     </div>
+      </div>
     </div>
     <footer id="footer"></footer>
   </body>
